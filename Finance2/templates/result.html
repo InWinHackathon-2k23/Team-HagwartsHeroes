@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+
+
+< lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Recommendation - Result</title>
+</head>
+<body>
+    <h1>Recommended Investment Sequence</h1>
+    <ul>
+        {% for investment in investment_sequence %}
+            <li>{{ investment.scheme_name }}: Invest {{ investment.investment_amount }} for {{ investment.tenure }} years at {{ investment.rate_of_interest }}%</li>
+        {% endfor %}
+    </ul>
+</body>
+
+
+</html>
+
+

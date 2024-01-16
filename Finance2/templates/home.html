@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Enter Investment Details</h1>
+    <form action="result" method="post">
+        {% csrf_token %}
+        <label for="principal_amount">Principal Amount:</label>
+        <input type="number" name="principal_amount" required><br>
+        <label for="investment_tenure">Investment Tenure (in years):</label>
+        <input type="number" name="investment_tenure" required><br>
+        <input type="submit" value="Submit">
+    </form>
+    
+
+{% endblock%}
